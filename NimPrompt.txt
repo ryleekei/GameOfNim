@@ -1,0 +1,35 @@
+Objective:
+Develop a C++ program to simulate a game of Nim where a human plays against the computer.
+
+Game Rules:
+Two players alternately take marbles from a pile.
+In each turn, a player must take at least one but at most half of the marbles.
+The player who takes the last marble loses.
+Program Requirements:
+Initial Setup:
+
+Generate a random initial pile size between PILE_MIN (10) and PILE_MAX (50).
+Decide randomly who starts first (computer or human).
+Decide randomly if the computer will play a "smart" or "non-smart" move.
+Gameplay:
+
+Computer's Turn:
+In "smart" mode, make moves to reduce the pile to sizes that are powers of two minus one (1, 3, 7, 15, 31, etc.).
+In "non-smart" mode, make random legal moves.
+Human's Turn:
+Prompt the user to enter a legal move until a valid input is provided.
+Display:
+
+Show the current number of marbles after each move using the MARBLE constant.
+End Game:
+
+The player who is forced to take the last marble loses.
+
+Special Requirements:
+	Functions:
+
+		void computer_play(int& pile, bool smart): Handles the computer's move.
+		void player_play(int& pile): Handles the user's move.
+	Introduction Message:
+
+		Print a specific welcome message at the start of the game with the developer's name.
